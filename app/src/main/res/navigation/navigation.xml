@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/introFragment">
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.example.newsappproba.IntroFragment"
+        android:label="IntroFragment"
+        tools:layout="@layout/fragment_intro">
+        <action
+            android:id="@+id/action_introFragment_to_newsArticleFragment"
+            app:destination="@id/newsArticleFragment" />
+        <action
+            android:id="@+id/action_introFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsArticleFragment"
+        android:name="com.example.newsappproba.NewsArticleFragment"
+        android:label="fragment_news_article"
+        tools:layout="@layout/fragment_news_article" >
+        <action
+            android:id="@+id/action_newsArticleFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_newsArticleFragment_to_introFragment"
+            app:destination="@id/introFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.newsappproba.FavoritesFragment"
+        android:label="FavoritesFragment"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favoritesFragment_to_newsArticleFragment"
+            app:destination="@id/newsArticleFragment" />
+        <action
+            android:id="@+id/action_favoritesFragment_to_introFragment"
+            app:destination="@id/introFragment" />
+    </fragment>
+</navigation>

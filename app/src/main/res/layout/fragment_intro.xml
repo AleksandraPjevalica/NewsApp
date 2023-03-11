@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="item"
+            type="com.example.newsappproba.IntroFragment" />
+    </data>
+
+
+    <RelativeLayout
+
+        android:id="@+id/fragment_intro"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="1000"
+            tools:listitem="@layout/item_layout" />
+       <androidx.cardview.widget.CardView
+           android:layout_width="60dp"
+           android:layout_height="60dp"
+           android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+           android:layout_marginBottom="10dp"
+           android:layout_marginEnd="10dp"
+           android:backgroundTint="@color/design_default_color_primary_dark"
+           app:cardCornerRadius="100dp"
+           >
+        <ImageView
+            android:id="@+id/refresh_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="refresh"
+            android:src="@drawable/refresh_icon"
+            android:text="SHARE">
+
+        </ImageView>
+       </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</layout>
